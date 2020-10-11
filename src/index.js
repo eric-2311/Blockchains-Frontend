@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Typeahead from './typeahead';
 
 const colorsList = [
   "AliceBlue",
@@ -152,9 +153,14 @@ const colorsList = [
   "YellowGreen",
 ];
 
-ReactDOM.render(
-  {
-    /* <YourComponentGoesHere /> */
-  },
-  document.getElementById("root")
-);
+// ReactDOM.render(
+//   {
+//     /* <YourComponentGoesHere /> */
+//   },
+//   document.getElementById("root")
+// );
+
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.getElementById('root');
+  ReactDOM.render(<Typeahead list={colorsList}/>, root);
+})
